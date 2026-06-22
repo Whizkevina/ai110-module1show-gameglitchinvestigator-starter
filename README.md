@@ -79,31 +79,51 @@ Here's a step-by-step walkthrough of a fixed game session on **Normal difficulty
 ```
 ============================= test session starts =============================
 platform win32 -- Python 3.13.7, pytest-9.1.0, pluggy-1.6.0
-collected 14 items
+collected 28 items
 
-tests/test_game_logic.py::test_winning_guess PASSED                      [  7%]
-tests/test_game_logic.py::test_guess_too_high PASSED                     [ 14%]
-tests/test_game_logic.py::test_guess_too_low PASSED                      [ 21%]
-tests/test_game_logic.py::test_bug1_too_high_hint_message PASSED         [ 28%]
-tests/test_game_logic.py::test_bug1_too_low_hint_message PASSED          [ 35%]
-tests/test_game_logic.py::test_bug1_multiple_cases PASSED                [ 42%]
-tests/test_game_logic.py::test_bug3_easy_difficulty_range PASSED         [ 50%]
-tests/test_game_logic.py::test_bug3_normal_difficulty_range PASSED       [ 57%]
-tests/test_game_logic.py::test_bug3_hard_difficulty_range PASSED         [ 64%]
-tests/test_game_logic.py::test_bug3_difficulty_progression PASSED        [ 71%]
-tests/test_game_logic.py::test_parse_guess_valid_input PASSED            [ 78%]
-tests/test_game_logic.py::test_parse_guess_float_input PASSED            [ 85%]
-tests/test_game_logic.py::test_parse_guess_invalid_input PASSED          [ 92%]
-tests/test_game_logic.py::test_parse_guess_empty_input PASSED            [100%]
+tests/test_game_logic.py::test_winning_guess PASSED                      [  3%]
+tests/test_game_logic.py::test_guess_too_high PASSED                     [  7%]
+tests/test_game_logic.py::test_guess_too_low PASSED                      [ 10%]
+tests/test_game_logic.py::test_bug1_too_high_hint_message PASSED         [ 14%]
+tests/test_game_logic.py::test_bug1_too_low_hint_message PASSED          [ 17%]
+tests/test_game_logic.py::test_bug1_multiple_cases PASSED                [ 21%]
+tests/test_game_logic.py::test_bug3_easy_difficulty_range PASSED         [ 25%]
+tests/test_game_logic.py::test_bug3_normal_difficulty_range PASSED       [ 28%]
+tests/test_game_logic.py::test_bug3_hard_difficulty_range PASSED         [ 32%]
+tests/test_game_logic.py::test_bug3_difficulty_progression PASSED        [ 35%]
+tests/test_game_logic.py::test_parse_guess_valid_input PASSED            [ 39%]
+tests/test_game_logic.py::test_parse_guess_float_input PASSED            [ 42%]
+tests/test_game_logic.py::test_parse_guess_invalid_input PASSED          [ 46%]
+tests/test_game_logic.py::test_parse_guess_empty_input PASSED            [ 50%]
+tests/test_game_logic.py::test_edge_case_negative_number PASSED          [ 53%]
+tests/test_game_logic.py::test_edge_case_very_large_number PASSED        [ 57%]
+tests/test_game_logic.py::test_edge_case_float_with_negative PASSED      [ 60%]
+tests/test_game_logic.py::test_edge_case_scientific_notation PASSED      [ 64%]
+tests/test_game_logic.py::test_edge_case_float_near_integer PASSED       [ 67%]
+tests/test_game_logic.py::test_edge_case_whitespace_input PASSED         [ 71%]
+tests/test_game_logic.py::test_edge_case_zero_guess PASSED               [ 75%]
+tests/test_game_logic.py::test_edge_case_boundary_one PASSED             [ 78%]
+tests/test_game_logic.py::test_edge_case_boundary_hundred PASSED         [ 82%]
+tests/test_game_logic.py::test_edge_case_guess_equals_secret_edge PASSED [ 85%]
+tests/test_game_logic.py::test_edge_case_string_with_plus_sign PASSED    [ 89%]
+tests/test_game_logic.py::test_edge_case_multiple_decimal_points PASSED  [ 92%]
+tests/test_game_logic.py::test_edge_case_infinity_string PASSED          [ 96%]
+tests/test_game_logic.py::test_edge_case_nan_string PASSED               [100%]
 
-============================= 14 passed in 0.13s ==============================
+============================= 28 passed in 0.21s ==============================
 ```
 
-**Test Coverage:** All 14 tests pass! This includes:
+**Test Coverage:** All 28 tests pass! This includes:
 - 3 foundational tests (winning guess, too high, too low)
 - 3 bug-specific tests for backwards hints validation
 - 4 difficulty range progression tests  
 - 4 helper function tests (parse_guess validation)
+- **14 advanced edge-case tests (CHALLENGE 1)** including:
+  - Negative numbers and very large numbers
+  - Float-to-int conversion edge cases
+  - Boundary conditions (0, 1, 100)
+  - Whitespace handling
+  - Invalid inputs (infinity, NaN, multiple decimals)
 
 ## 🚀 Stretch Features
 
