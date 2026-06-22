@@ -159,4 +159,61 @@ tests/test_game_logic.py::test_edge_case_nan_string PASSED               [100%]
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, describe the Enhanced UI changes here — a screenshot is optional]
+### ✅ Challenge 4: Enhanced UI & Professional Styling
+
+**Objective:** Upgrade the game's user interface with modern styling, improved visual hierarchy, and enhanced user experience.
+
+**Changes Implemented:**
+
+**CSS & Visual Enhancements:**
+- Added custom gradient backgrounds (purple/blue gradient for main title and success states)
+- Implemented color-coded visual hierarchy:
+  - 🟢 Green for Easy difficulty badge
+  - 🟡 Yellow for Normal difficulty badge  
+  - 🔴 Red for Hard difficulty badge
+- Added smooth borders, rounded corners, and modern aesthetics
+- Created responsive layout with proper spacing and alignment
+- Integrated emoji icons throughout for better visual communication
+
+**UI Components Upgraded:**
+
+1. **Main Title** - Gradient text effect with game controller emoji (🎮 Game Glitch Investigator)
+2. **Settings Sidebar** - Enhanced with:
+   - Difficulty badge with emoji indicator and color coding
+   - 📊 Game Stats section with metrics (🎲 Range, ❤️ Attempts)
+   - Better visual organization
+
+3. **Game Area** - Added visual feedback with:
+   - 📈 Progress bar showing attempts used vs. total
+   - ⭐ Score display in styled box with emoji
+   - Enhanced info box with emoji icons and color-coded text
+   - Better placeholder text in input field
+
+4. **Button Layout** - Improved with:
+   - Full-width responsive buttons
+   - Better spacing and visual hierarchy
+   - Container grouping for related actions
+   - 🚀 Submit Guess, 🔁 New Game, and checkbox controls
+
+5. **Footer** - Professional footer with:
+   - AI generation note with emoji
+   - Project achievements summary (✅ Bugs fixed, 🧪 Tests passing, 📊 Documentation)
+   - Centered, professional styling
+
+**Code Changes:**
+- Modified `app.py` with custom CSS styling using `st.markdown()` with inline styles
+- Added gradient effects and color variables for difficulty levels
+- Implemented emoji integration for better UX
+- Created `screenshots/` directory for documentation
+
+**Visual Results:**
+- Game went from basic text interface to modern, professional-looking web app
+- Improved visual hierarchy makes it easier to understand game state
+- Color-coded elements provide instant feedback on game settings
+- Professional appearance suitable for portfolio or production use
+
+**Testing & Validation:**
+- Tested UI enhancements on localhost Streamlit server
+- Verified all interactive elements work correctly
+- Confirmed responsive layout on different screen sizes
+- All 28 existing tests still pass - no functionality regression
